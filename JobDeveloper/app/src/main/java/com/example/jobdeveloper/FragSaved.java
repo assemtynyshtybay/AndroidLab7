@@ -14,31 +14,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class FragSaved extends Fragment {
-
     View v;
-
-    private RecyclerView myrecyclerv;
-    private ArrayList<Job> saveds;
-
-
     public FragSaved(){
     }
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
         v=inflater.inflate(R.layout.frag_saved, container, false);
-        myrecyclerv = v.findViewById(R.id.saveds);
-        JobAdapter recyclerViewAdapter=new JobAdapter(getContext(), saveds);
-        myrecyclerv.setLayoutManager(new LinearLayoutManager(getActivity()));
-
-        myrecyclerv.setAdapter(recyclerViewAdapter);
         return v;
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        saveds = new ArrayList<>();
-
     }
 }
