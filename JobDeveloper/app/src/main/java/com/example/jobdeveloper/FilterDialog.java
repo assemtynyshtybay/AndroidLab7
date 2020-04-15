@@ -11,7 +11,7 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import android.app.DialogFragment;
 
-class FilterDialog extends DialogFragment {
+public class FilterDialog extends DialogFragment {
     private EditText description;
     private EditText location;
     private Button filter;

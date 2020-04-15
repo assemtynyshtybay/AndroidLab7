@@ -20,6 +20,8 @@ import android.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.tigerliang.tablayout.TabLayout;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,6 +62,7 @@ public class FragJobs extends Fragment {
         final View view = inflater.inflate(R.layout.frag_jobs, container,false);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Developer Jobs");
         setHasOptionsMenu(true);
+
         progressBar=view.findViewById(R.id.loading);
         recyclerView=view.findViewById(R.id.jobs);
         //jobs in linear
@@ -75,7 +78,7 @@ public class FragJobs extends Fragment {
                         .replace(R.id.fragment, JobDetail.newInstance(job))
                         .addToBackStack("second")
                         .commit();
-                }
+            }
         };
         adapter= new JobAdapter(jobs, listener);
         recyclerView.setAdapter(adapter);
