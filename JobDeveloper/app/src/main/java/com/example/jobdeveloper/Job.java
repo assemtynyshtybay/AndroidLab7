@@ -2,7 +2,7 @@ package com.example.jobdeveloper;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
+//
 public class Job {
 
     @SerializedName("id")

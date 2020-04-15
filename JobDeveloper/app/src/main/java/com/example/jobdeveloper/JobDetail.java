@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Fragment;
 
 import com.squareup.picasso.Picasso;
-
+//
 public class JobDetail extends Fragment {
     ImageView companyLogo;
     TextView company;
